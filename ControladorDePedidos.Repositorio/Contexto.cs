@@ -15,5 +15,6 @@ namespace ControladorDePedidos.Repositorio
         }
 
         public DbSet<Marca> Marca { get; set; }
+        public DbSet<Produto> Produto { get; set; }
     }
 }
