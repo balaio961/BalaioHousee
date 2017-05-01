@@ -1,12 +1,33 @@
 ﻿using ControladorDePedidos.Model;
 using ControladorDePedidos.Repositorio;
 using System.Windows;
+using System.Windows.Data;
+using System;
+using System.Globalization;
+using System.Windows.Media;
 
 namespace ControladorDePedidos.WPF
 {
-    /// <summary>
-    /// Interaction logic for formProdutos.xaml
-    /// </summary>
+    public class ConversorDeEstoque : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            var produto = value as Produto;
+            if (produto.QuantidadeEmEstoque < produto.QuantidadeMinimaEmEstoque)
+            {
+                return new SolidColorBrush(Colors.Red);
+            }
+            else
+            {
+                return new SolidColorBrush(Colors.Black);
+            }
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
     public partial class formProdutos : Window
     {
         RepositorioProduto repositorio;

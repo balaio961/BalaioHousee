@@ -36,5 +36,11 @@ namespace ControladorDePedidos.WPF
             var janelaUsuario = new formUsuario();
             janelaUsuario.Show();
         }
+
+        private void btnClientes_Click(object sender, RoutedEventArgs e)
+        {
+            var janelaClientes = new formClientes();
+            janelaClientes.Show();
+        }
     }
 }
