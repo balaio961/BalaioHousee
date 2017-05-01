@@ -73,6 +73,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="formCadastroDeUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="formMarcas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -98,6 +102,9 @@
     </Compile>
     <Compile Include="formCadastroDeProduto.xaml.cs">
       <DependentUpon>formCadastroDeProduto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="formCadastroDeUsuario.xaml.cs">
+      <DependentUpon>formCadastroDeUsuario.xaml</DependentUpon>
     </Compile>
     <Compile Include="formMarcas.xaml.cs">
       <DependentUpon>formMarcas.xaml</DependentUpon>

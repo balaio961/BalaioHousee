@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ControladorDePedidos.WPF"
         Loaded="Window_Loaded"
         mc:Ignorable="d"
-        Title="Marcas" Height="446" Width="694" WindowStartupLocation="CenterScreen">
+        Title="Usuários" Height="446" Width="694" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <ResourceDictionary Source="/dn32Layout;component/Themes/dn32ImageButton.xaml"></ResourceDictionary>
     </Window.Resources>
@@ -44,7 +44,7 @@
             ImageSize="32"
             FontSize="12"
             Padding="3" Click="btnAtualizar_Click"/>
-        <ListView x:Name="lstMarcas" SelectionMode="Single" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="310" Margin="13,95,0,0" VerticalAlignment="Top" Width="666">
+        <ListView x:Name="lstUsuarios" SelectionMode="Single" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="310" Margin="13,95,0,0" VerticalAlignment="Top" Width="666">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Código" Width="150" DisplayMemberBinding="{Binding Codigo}"/>
